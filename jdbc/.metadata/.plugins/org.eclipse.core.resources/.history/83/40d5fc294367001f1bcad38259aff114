@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="">
+		Email: <input type="email" name="m"><br>
+		Name: <input type="email" name="m"><br>
+		Phone: <input type="emailateeme="m"><br>
+		Course: <input type="email" name="m"><br>
+		Education: <input type="email" name="m"><br>
+		Stream: <input type="email" name="m"><br>
+		YOP: <input type="email" name="m"><br>
+		Gender: <input type="email" name="m"><br>
+		FeesPaid: <input type="email" name="m"><br>
+		
+
+	</form>
+</body>
+</html>

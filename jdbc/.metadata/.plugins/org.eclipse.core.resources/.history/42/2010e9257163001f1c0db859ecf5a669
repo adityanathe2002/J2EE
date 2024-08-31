@@ -1,0 +1,13 @@
+
+<web-app>
+
+	<servet>
+		<servlet-name>FetchObject</servlet-name>
+		<servlet-class>com.qsp.FetchObject</servlet-class>
+	</servet>
+	<servlet-mapping>
+		<servlet-name>FetchObject</servlet-name>
+		<url-pattern>/obj</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,163 @@
+package com.qsp.controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.qsp.model.Employee;
+
+public class EmployeeController {
+
+	static Connection con;
+	static String url = "jdbc:postgresql://localhost:5432/qsp";
+	static String user = "postgres";
+	static String password = "root";
+	static {
+		try {
+			// 1st step
+			Class.forName("org.postgresql.Driver");
+			// 2nd step
+			con = DriverManager.getConnection(url, user, password);
+//			System.out.println(con);
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void insert(Employee e) {
+
+		try {
+			// 3rd step
+			PreparedStatement ps = con.prepareStatement("insert into emp values(?,?,?,?,?)");
+			// setting the value to delimiter
+			ps.setInt(1, e.getId());
+			ps.setString(2, e.getName());
+			ps.setLong(3, e.getContact());
+			ps.setDouble(4, e.getSal());
+			ps.setString(5, e.getJob());
+
+			// 4th step
+			ps.executeUpdate();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+
+	// Update the data
+	public static boolean updateById(int id, String name) {
+		Employee emp = fetchById(id);
+		if (emp.getName() != null) {
+			// 3rd step
+			try {
+				PreparedStatement ps = con.prepareStatement("update emp set name=? where id=?");
+				ps.setString(1, name);
+				ps.setInt(2, id);
+				// 4th step
+				ps.executeUpdate();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public static boolean updateSalById(int id, double sal) {
+		Employee emp = fetchById(id);
+		if (emp != null && emp.getId()!=0) {
+			// 3rd step
+			try {
+				PreparedStatement ps = con.prepareStatement("update emp set sal=? where id=?");
+				ps.setDouble(1, sal);
+				ps.setInt(2, id);
+				// 4th step
+				ps.executeUpdate();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// Fetching the data
+	public static Employee fetchById(int id) {
+		Employee e = new Employee();
+		try {
+			PreparedStatement ps = con.prepareStatement("Select * from emp where id=?");
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				e.setId(rs.getInt("id"));
+				e.setName(rs.getString("name"));
+				e.setContact(rs.getLong("contact"));
+				e.setSal(rs.getDouble("sal"));
+				e.setJob(rs.getString("job"));
+
+			}
+		} catch (SQLException el) {
+			// TODO Auto-generated catch block
+			el.printStackTrace();
+		}
+		return e;
+	}
+
+	public static List<Employee> fetchByAll() {
+		List<Employee> li = new ArrayList<Employee>();
+		try {
+			// 3rd step
+			PreparedStatement ps = con.prepareStatement("select * from emp ");
+			// 4th step
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Employee emp = new Employee();
+				emp.setId(rs.getInt("id"));
+				emp.setName(rs.getString("name"));
+				emp.setContact(rs.getLong("contact"));
+				emp.setSal(rs.getDouble("sal"));
+				emp.setJob(rs.getString("job"));
+				li.add(emp);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return li;
+	}
+
+	// Delete the data
+	public static boolean deleteById(int id) {
+		Employee e = fetchById(id);
+		if (e.getName() != null) {
+			try {
+				PreparedStatement ps = con.prepareStatement("delete from emp where id=?");
+				ps.setInt(1, id);
+				ps.executeUpdate();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			return true;
+
+		} else {
+			return false;
+		}
+	}
+	// Close connection
+	public static void closeConnection() {
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

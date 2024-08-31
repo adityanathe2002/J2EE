@@ -1,0 +1,5 @@
+package com.qsp.registration_app.dto;
+
+public class student {
+
+}

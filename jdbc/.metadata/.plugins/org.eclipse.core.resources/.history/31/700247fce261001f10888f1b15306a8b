@@ -1,0 +1,13 @@
+
+<web-app>
+	
+	<context-param>
+		<param-name>user</param-name>
+		<param-name>postgres</param-name>
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-name>root</param-name>
+	</context-param>
+
+</web-app>

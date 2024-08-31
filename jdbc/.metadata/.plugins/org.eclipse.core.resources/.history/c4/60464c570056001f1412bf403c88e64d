@@ -1,0 +1,30 @@
+package com.qsp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class PreparedStatement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			Class.forName("org.postgresql.Driver");
+			Connection con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/qsp","postgres","root");
+			
+			PreparedStatement ps=con.prepareStatement("insert into student values(?,?)");
+//			assign to value delimiter
+			ps.setInt(1,101);
+			ps.setString(2,"vishal");
+			ps.setLong(3,987654);
+			
+//			4th step
+			ps.executeUpdate();
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

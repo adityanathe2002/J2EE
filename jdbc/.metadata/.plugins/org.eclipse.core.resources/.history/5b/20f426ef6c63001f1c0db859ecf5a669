@@ -1,0 +1,31 @@
+package com.qsp;
+
+import java.io.IOException;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(value = "/emp")
+public class ServletContextExample extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		ServletContext sc=getServletContext();
+		Employee e1 = new Employee();
+		e1.setId(101);
+		e1.setName("Arjit Singh");
+		e1.setPhone(9876543210l);
+		sc.setAttribute("e1", e1);
+		
+		Employee e2 = new Employee();
+		e1.setId(102);
+		e1.setName("Shreya Ghoshal");
+		e1.setPhone(8876543216l);
+		sc.setAttribute("e2", e2);
+	}
+
+}

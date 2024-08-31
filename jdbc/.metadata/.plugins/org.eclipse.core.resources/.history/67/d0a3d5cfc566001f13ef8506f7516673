@@ -1,0 +1,8 @@
+package com.qsp.registration_app.controller;
+
+public class studentController {
+	public static void main(String[] args) {
+		
+	}
+
+}

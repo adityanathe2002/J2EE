@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+	text-align:center;
+}
+form{
+border:2px solid black;
+padding: 40px;
+}
+
+</style>
+</head>
+<body>
+	<form action="login">
+		User: <input type="text" name="un"><br> 
+		PassWord: <input type="text" name="pass"><br> 
+		<input type="submit" value="login">
+	</form>
+</body>
+</html>
