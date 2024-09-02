@@ -178,7 +178,7 @@ public class studentDao {
 			e.printStackTrace();
 		}
 	}
-	// login
+	// logini
 	public boolean login(String email, long phone) {
 		try {
 			PreparedStatement ps=con.prepareStatement("Select * from student where email=? and phone=?");
@@ -197,115 +197,9 @@ public class studentDao {
 		return false;
 	}
 
-	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//		System.err.println("**** Welcome ****");
-//		do {
-//			System.out.println("1. Insert Student");
-//			System.out.println("2. Fetch Student By Email");
-//			System.out.println("3. Fetch All Student");
-//			System.out.println("4. Update Student Name By Email");
-//			System.out.println("5. Upadate Student Phone By Email");
-//			System.out.println("6. Delete Student By Email");
-//			System.out.println("7. Close Connetion");
-//			System.out.println("");
-//			System.out.println("Enter an Option: ");
-//
-//			switch (sc.nextInt()) {
-//			case 1: {
-//				// Insert Data
-//				student s = new student();
-//				System.out.println("Enter Email: ");
-//				s.setEmail(sc.next());
-//				System.out.println("Enter Name: ");
-//				s.setName(sc.next());
-//				System.out.println("Enter Phone: ");
-//				s.setPhone(sc.nextLong());
-//				System.out.println("Enter Course: ");
-//				s.setCourse(sc.next());
-//				System.out.println("Enter Education: ");
-//				s.setEducation(sc.next());
-//				System.out.println("Enter Stream: ");
-//				s.setStream(sc.next());
-//				System.out.println("Enter Year Of Pass: ");
-//				s.setYearsOfPass(sc.nextInt());
-//				System.out.println("Enter Gender: ");
-//				s.setGender(sc.next());
-//				System.out.println("Enter FeesPaid: ");
-//				s.setFeesPaid(sc.next());
-//				studentDao.insert(s);
-//				System.out.println("inserted");
-//
-//			}
-//				break;
-//			case 2: {
-//				// Fetch Student by Email
-//				System.out.println("Enter Email: ");
-//				student s= studentDao.fetchByEmail(sc.next());
-//				System.out.println(s);
-//
-//			}
-//				break;
-//			case 3: {
-//				// Fetch All Student
-//				List<student> li =studentDao.fetchByAll();
-//				for (student s : li) {
-//					System.out.println(s);
-//				}
-//
-//			}
-//				break;
-//			case 4: {
-//				// Update Name
-//				System.out.println("Enter Email: ");
-//				String email = sc.next();
-//				System.out.println("Enter New Name: ");
-//				String newName = sc.next();
-//				boolean b = studentDao.updateByEmail(email, newName);
-//				if (b) {
-//					System.out.println("Updated----");
-//				} else {
-//					System.out.println("Email is not present");
-//				}
-//			}
-//				break;
-//			case 5: {
-//				// Update Phone
-//				System.out.println("Enter Email: ");
-//				String email = sc.next();
-//				System.out.println("Enter New Phone: ");
-//				long newPhone = sc.nextLong();
-//				boolean b = studentDao.updateByEmail(email, newPhone);
-//				if (b) {
-//					System.out.println("Updated----");
-//				} else {
-//					System.out.println("Email is not present");
-//				}
-//
-//			}
-//				break;
-//			case 6: {
-//				// Delete 
-//				System.out.println("Enter Email");
-//				boolean b = studentDao.deleteByEmail(sc.next());
-//				if (b) {
-//					System.out.println("deleted.....");
-//				} else {
-//					System.out.println("is not in present");
-//				}
-//
-//			}
-//				break;
-//			case 7: {
-//				// Close Connection
-//				studentDao.closeConnection();
-//				System.out.println("Connection is closed.....");
-//			}
-//			default:System.out.println("Wrong Info");
-//			}
-//			System.out.println("Enter Y to Continue");
-//		} while ("Y".equalsIgnoreCase(sc.next()));
-//
+	public static void main(String[] args) {		
 	}
 
 }
+
+

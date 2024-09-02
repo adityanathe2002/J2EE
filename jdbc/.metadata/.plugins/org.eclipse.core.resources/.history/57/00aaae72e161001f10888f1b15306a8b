@@ -1,9 +1,0 @@
-
-<web-app>
-	<dispaly-name>Hello Homeeeee</dispaly-name>
-	<context-param>
-		<param-name>user</param-name>
-		<param-name>postgres</param-name>
-	</context-param>
-
-</web-app>
