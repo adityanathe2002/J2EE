@@ -2,7 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\HP\Desktop\registration ws\student-registration-app"/>
 			<item value="C:\Users\HP\Desktop\J2EE\jdbc\library_app"/>
+			<item value="C:\Users\HP\Desktop\J2EE\jdbc\registration_app\src\main\webapp\index.jsp"/>
 			<item value="C:\Users\HP\Desktop\J2EE\jdbc\registration_app\src\main\webapp\WEB-INF\web.xml"/>
 			<item value="C:\Users\HP\Desktop\J2EE\jdbc\servlet1"/>
 			<item value="C:\Users\HP\Desktop\J2EE\jdbc\basic-jdbc\src\main\java\com\qsp\PreparedStatemnetEx.java"/>
@@ -29,18 +31,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.library.library_app"/>
-			<item value="com.library.library_management_app"/>
-			<item value="com.qsp.hello_app"/>
+			<item value="com.library.Library_aervlet"/>
 		</list>
 		<list key="groupId">
 			<item value="com.library"/>
-			<item value="com.qsp"/>
 		</list>
 		<list key="artifactId">
-			<item value="library_app"/>
-			<item value="library_management_app"/>
-			<item value="hello_app"/>
+			<item value="Library-aervlet"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -76,5 +73,33 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\HP\Desktop\registration ws\student-registration-app"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+		<list key="archetypeGroupId">
+			<item value="org.apache.maven.archetype"/>
+		</list>
+		<list key="archetypeArtifactId">
+			<item value="maven-archetype-webapp"/>
+		</list>
+		<list key="archetypeVersion">
+			<item value="1.4"/>
+			<item value="1.0"/>
+		</list>
+		<list key="repositoryUrl">
+			<item value=""/>
+		</list>
 	</section>
 </section>

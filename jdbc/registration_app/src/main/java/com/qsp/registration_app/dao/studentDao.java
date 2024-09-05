@@ -178,7 +178,7 @@ public class studentDao {
 			e.printStackTrace();
 		}
 	}
-	// logini
+	// login
 	public boolean login(String email, long phone) {
 		try {
 			PreparedStatement ps=con.prepareStatement("Select * from student where email=? and phone=?");

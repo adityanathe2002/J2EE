@@ -3,6 +3,8 @@ C:\Users\HP\Desktop\J2EE\jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsea
 \servlet1\src\main\java
 C:\Users\HP\Desktop\J2EE\jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\596259995.index
 \registration_app\src\main\java
+C:\Users\HP\Desktop\J2EE\jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4003443070.index
+\Library-servlet\src\main\java
 C:\Users\HP\Desktop\J2EE\jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\167373707.index
 \Servlet_2\src\main\java
 C:\Users\HP\Desktop\J2EE\jdbc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\987916893.index
