@@ -17,6 +17,7 @@ public class UpdateDriver {
 		
 		Adhar a=p.getCard();
 		a.setName("abc");
+		
 		et.begin();
 		em.merge(p);
 		em.merge(a);

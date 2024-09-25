@@ -25,9 +25,19 @@ public class FetchDriver {
 		Review review1=em.find(Review.class, 1);
 		Review review2=em.find(Review.class, 2);
 		Product product=review1.getProduct();
-		System.out.println("**** Product*****");
+		
+		System.err.println("**** Product*****");
 		System.out.println("ID : "+ product.getId());
 		System.out.println("NAME: "+product.getName());
 		System.out.println("PRICE: "+product.getPrice());
+		
+		reviewDetails(review2);
+		reviewDetails(review1);
+	}
+	public static void reviewDetails(Review review) {
+		System.err.println("****REVIEW****");
+		System.out.println("ID: "+ review.getId());
+		System.out.println("MESSAGE: "+review.getMessage());
+		System.out.println("RATING: "+review.getRating());
 	}
 }
